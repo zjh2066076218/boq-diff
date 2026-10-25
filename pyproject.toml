@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "boq-diff"
-version = "0.1.0"
+version = "0.2.0"
 description = "工程量清单版本对比工具 / Compare two versions of a bill of quantities and generate a diff report"
 readme = "README.md"
 license = { text = "MIT" }
@@ -12,6 +12,9 @@ requires-python = ">=3.10"
 authors = [{ name = "zjh2066076218" }]
 keywords = ["bill-of-quantities", "工程量清单", "construction", "cost-engineering", "diff", "excel"]
 dependencies = ["openpyxl>=3.1"]
+
+[project.optional-dependencies]
+xls = ["xlrd>=2.0"]
 
 [project.scripts]
 boq-diff = "boq_diff.cli:main"
